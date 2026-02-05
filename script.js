@@ -68,10 +68,33 @@ function setupTilt(){
   });
 }
 
+
+// GitHub Last Commit Date
+async function updateLastCommitDate() {
+  const repo = "SaurHub123/me";
+  const lastUpdatedElement = document.getElementById("last-updated");
+  if (!lastUpdatedElement) return;
+
+  try {
+    const response = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=1`);
+    if (!response.ok) throw new Error("Failed to fetch commits");
+    
+    const data = await response.json();
+    if (data && data.length > 0 && data[0].commit && data[0].commit.committer) {
+      const commitDate = new Date(data[0].commit.committer.date);
+      const options = { year: 'numeric', month: 'short', day: 'numeric' };
+      lastUpdatedElement.textContent = commitDate.toLocaleDateString('en-US', options);
+    }
+  } catch (error) {
+    console.error("Error fetching last commit date:", error);
+  }
+}
+
 // Init
 document.addEventListener("DOMContentLoaded", ()=>{
   initTheme();
   document.querySelectorAll(".theme-toggle").forEach(b=>b.addEventListener("click", toggleTheme));
   setupReveal();
   setupTilt();
+  updateLastCommitDate();
 });
