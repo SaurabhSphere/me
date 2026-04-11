@@ -134,6 +134,34 @@ async function updateLastCommitDate() {
   }
 }
 
+// ===== BACKEND HEALTH CHECK (run early on page load) =====
+const CHAT_BASE_URL = 'https://saurabh-s-assistant.onrender.com';
+let backendReady = false;
+let backendChecked = false;
+
+async function performHealthCheck(){
+  try{
+    console.log('🔄 Checking backend health...');
+    const res = await fetch(`${CHAT_BASE_URL}/health`);
+    const data = await res.json();
+    if(data && data.status === 'ok'){
+      backendReady = true;
+      console.log('✅ Backend is healthy');
+    } else {
+      console.warn('⚠️ Health check returned unexpected status:', data);
+      backendReady = false;
+    }
+  }catch(err){
+    console.error('❌ Health check failed:', err);
+    backendReady = false;
+  }finally{
+    backendChecked = true;
+  }
+}
+
+// Start health check as soon as script loads (no waiting for DOM)
+performHealthCheck();
+
 // Init function
 function initializeApp(){
   console.log('initializeApp() called');
@@ -157,7 +185,6 @@ if(document.readyState === 'loading'){
 }
 
 // ===== CHAT INITIALIZATION =====
-const CHAT_BASE_URL = 'https://saurabh-s-assistant.onrender.com';
 
 function initChat(){
   try{
@@ -194,37 +221,34 @@ function initChat(){
     }
     console.log('✅ All elements found!');
 
-    // Disable send button until health check passes
-    let backendReady = false;
-    sendBtn.disabled = true;
-    sendBtn.style.opacity = '0.5';
-    sendBtn.style.cursor = 'not-allowed';
-    input.placeholder = 'Connecting to server...';
-    input.disabled = true;
-
-    async function checkBackendHealth(){
-      try{
-        console.log('🔄 Checking backend health...');
-        const res = await fetch(`${CHAT_BASE_URL}/health`);
-        const data = await res.json();
-        if(data && data.status === 'ok'){
-          backendReady = true;
-          sendBtn.disabled = false;
-          sendBtn.style.opacity = '1';
-          sendBtn.style.cursor = 'pointer';
-          input.disabled = false;
-          input.placeholder = 'Type a message...';
-          console.log('✅ Backend is healthy, send button enabled');
-        } else {
-          console.warn('⚠️ Health check returned unexpected status:', data);
-          input.placeholder = 'Server unavailable, try later...';
-        }
-      }catch(err){
-        console.error('❌ Health check failed:', err);
-        input.placeholder = 'Server unavailable, try later...';
+    // Update UI based on backend status
+    function updateSendButtonState(){
+      if(backendReady){
+        sendBtn.disabled = false;
+        sendBtn.style.opacity = '1';
+        sendBtn.style.cursor = 'pointer';
+        input.disabled = false;
+        input.placeholder = 'Type a message...';
+      } else {
+        sendBtn.disabled = true;
+        sendBtn.style.opacity = '0.5';
+        sendBtn.style.cursor = 'not-allowed';
+        input.disabled = true;
+        input.placeholder = backendChecked ? 'Server unavailable, try later...' : 'Connecting to server...';
       }
     }
-    checkBackendHealth();
+    
+    // Set initial state
+    updateSendButtonState();
+    
+    // Watch for backend status changes (in case it becomes available after initial check)
+    const checkBackendInterval = setInterval(() => {
+      updateSendButtonState();
+      if(backendReady || backendChecked) {
+        clearInterval(checkBackendInterval);
+        console.log(backendReady ? '✅ Backend ready, send button enabled' : '❌ Backend unavailable');
+      }
+    }, 100);
   
   let conversationId = null;
   let labelHideTimer = null;
