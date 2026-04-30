@@ -213,10 +213,12 @@ function initChat(){
     console.log('imageModeBtn found:', !!imageModeBtn);
     const topbarMode = document.getElementById('topbarMode');
     console.log('topbarMode found:', !!topbarMode);
+    const loadingScreen = document.getElementById('chatLoadingScreen');
+    console.log('loadingScreen found:', !!loadingScreen);
     
     // Safety check - ensure all elements exist
-    if(!fab || !overlay || !closeBtn || !sendBtn || !input || !messagesEl || !modeModal || !chatModeBtn || !imageModeBtn){
-      console.error('❌ CRITICAL: Chat elements not found!', {fab, overlay, closeBtn, sendBtn, input, messagesEl, modeModal, chatModeBtn, imageModeBtn});
+    if(!fab || !overlay || !closeBtn || !sendBtn || !input || !messagesEl || !modeModal || !chatModeBtn || !imageModeBtn || !loadingScreen){
+      console.error('❌ CRITICAL: Chat elements not found!', {fab, overlay, closeBtn, sendBtn, input, messagesEl, modeModal, chatModeBtn, imageModeBtn, loadingScreen});
       return;
     }
     console.log('✅ All elements found!');
@@ -229,12 +231,16 @@ function initChat(){
         sendBtn.style.cursor = 'pointer';
         input.disabled = false;
         input.placeholder = 'Type a message...';
+        if(loadingScreen) loadingScreen.classList.remove('show');
+        if(messagesEl) messagesEl.style.display = 'flex';
       } else {
         sendBtn.disabled = true;
         sendBtn.style.opacity = '0.5';
         sendBtn.style.cursor = 'not-allowed';
         input.disabled = true;
         input.placeholder = backendChecked ? 'Server unavailable, try later...' : 'Connecting to server...';
+        if(loadingScreen) loadingScreen.classList.add('show');
+        if(messagesEl) messagesEl.style.display = 'none';
       }
     }
     
@@ -244,6 +250,16 @@ function initChat(){
     // Watch for backend status changes (in case it becomes available after initial check)
     const checkBackendInterval = setInterval(() => {
       updateSendButtonState();
+      // If backend just became ready and chat is open, show the mode modal
+      if(backendReady && !currentMode && overlay.classList.contains('open')){
+        if(loadingScreen) loadingScreen.classList.remove('show');
+        if(messagesEl) messagesEl.style.display = 'flex';
+        if(!messagesEl.children.length){
+          addBotMessage("Welcome to Saurabh's AI — how can I help you today.");
+          showModeModal();
+          showMetaAi();
+        }
+      }
       if(backendReady || backendChecked) {
         clearInterval(checkBackendInterval);
         console.log(backendReady ? '✅ Backend ready, send button enabled' : '❌ Backend unavailable');
@@ -340,13 +356,25 @@ function initChat(){
       
       fab.classList.add('hidden');
       hideFabLabel();
-      if(!messagesEl.children.length){
-        addBotMessage("Welcome to Saurabh's AI — how can I help you today.");
-        showModeModal();
-        showMetaAi();
-      }else{
+      
+      // Show loading screen if backend is not ready, otherwise show chat
+      if(!backendReady){
+        if(loadingScreen) loadingScreen.classList.add('show');
+        if(messagesEl) messagesEl.style.display = 'none';
+        hideModeModal();
         hideMetaAi();
+      }else{
+        if(loadingScreen) loadingScreen.classList.remove('show');
+        if(messagesEl) messagesEl.style.display = 'flex';
+        if(!messagesEl.children.length){
+          addBotMessage("Welcome to Saurabh's AI — how can I help you today.");
+          showModeModal();
+          showMetaAi();
+        }else{
+          hideMetaAi();
+        }
       }
+      
       setTimeout(()=>input.focus(),120);
       console.log('✅ openChat() COMPLETE - overlay should be visible now');
     }catch(err){
@@ -367,6 +395,7 @@ function initChat(){
     fab.classList.remove('hidden');
     showFabLabel();
     hideModeModal();
+    if(loadingScreen) loadingScreen.classList.remove('show');
     console.log('✅ Chat closed');
   }
 
