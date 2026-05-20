@@ -29,6 +29,7 @@
 
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="./mediaqueries.css" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <!-- Desktop Nav -->
@@ -127,7 +128,7 @@
     <div class="xt__container">
       <h2 class="xt__heading" id="xt-heading">Professional Experience</h2>
       <ol class="xt__timeline" role="list">
-        <li class="xt__item">
+        <!-- <li class="xt__item">
           <div class="xt__card">
             <header class="xt__head">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO9sbjRQpWHLJgv4TqzP-adn5zk8OTdez0VA&s" alt="AfroLingo logo" class="xt__logo" />
@@ -143,7 +144,7 @@
               <li>Developing and deploying custom LLMs for low-resource languages.</li>
             </ul>
           </div>
-        </li>
+        </li> -->
         <li class="xt__item">
           <div class="xt__card">
             <header class="xt__head">
@@ -396,6 +397,11 @@
         <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
         <p><a data-link="email">Gmail</a></p>
       </div>
+      <div id="turnstile-container" style="margin-left:1rem;">
+        <h3 style="margin:0 0 0.5rem 0;font-size:1rem">Human verification</h3>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADKG5DzQf9HkaLowt292xO6eFyY" data-callback="onTurnstileSuccess"></div>
+        <p id="turnstile-status" style="font-size:0.9rem;opacity:0.85;margin-top:0.25rem">Not verified</p>
+      </div>
       <div class="contact-info-container">
         <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
         <p><a data-link="linkedin">LinkedIn</a></p>
@@ -519,6 +525,55 @@
     </div>
   </div>
 
+  <script>
+  // Ensure callback is available on window for Cloudflare Turnstile
+  async function onTurnstileSuccess(token){
+    const statusEl = document.getElementById('turnstile-status');
+    statusEl.textContent = 'Verifying...';
+    console.log('Turnstile token received:', token);
+    try{
+      // send both `token` and `response` to be compatible with various backends
+      const res = await fetch('https://saurabh-codes.onrender.com/api/verify-human', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token, response: token })
+      });
+      const data = await res.json();
+      console.log('Verification response:', data);
+      if(data && data.success){
+        statusEl.textContent = 'Verified ✓';
+      } else {
+        const details = data && (data['error-codes'] || data.error || JSON.stringify(data));
+        statusEl.textContent = 'Verification failed: ' + (details || 'unknown');
+      }
+    }catch(err){
+      statusEl.textContent = 'Verification error (see console)';
+      console.error('verify error', err);
+    }
+  }
+  // expose globally in case Turnstile reads the callback before this script runs
+  window.onTurnstileSuccess = onTurnstileSuccess;
+
+  // If the Turnstile API already loaded, re-render the widget to ensure it's attached
+  function ensureTurnstileRendered(){
+    try{
+      if(window.turnstile){
+        const el = document.querySelector('#turnstile-container .cf-turnstile');
+        if(el){
+          // If element already has a widget id, skip render
+          if(!el.getAttribute('data-widget-id')){
+            const wid = window.turnstile.render(el, { sitekey: el.getAttribute('data-sitekey'), callback: onTurnstileSuccess });
+            el.setAttribute('data-widget-id', wid);
+            console.log('Turnstile widget rendered (id=', wid, ')');
+          }
+        }
+      }
+    }catch(e){ console.warn('ensureTurnstileRendered error', e); }
+  }
+  // Try immediately and again after a short delay
+  ensureTurnstileRendered();
+  setTimeout(ensureTurnstileRendered, 1200);
+  </script>
   <script src="./script.js"></script>
 </body>
 </html>
