@@ -364,3 +364,55 @@ img{max-width:100%;height:auto;display:block}
 /* Light theme formatting */
 .chat-msg.bot code{background:#f0f0f0;color:#d63384}
 .chat-msg.bot strong{color:#000;font-weight:600}
+
+/* ===== CHAT LOADING SCREEN ===== */
+.chat-loading-screen{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:100%;padding:20px;background:linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);overflow-y:auto;gap:16px}
+.chat-loading-screen.show{display:flex}
+.loading-content{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;max-width:380px;width:100%}
+.loading-animation{position:relative;width:80px;height:80px;margin:10px 0}
+.spinner{width:100%;height:100%;border:4px solid rgba(36,105,79,0.1);border-top:4px solid #24694f;border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.loading-content h2{font-size:20px;font-weight:700;color:#000;text-align:center;margin:0}
+.about-ai{font-size:13px;color:#666;text-align:center;margin:0;font-weight:500}
+.about-content{width:100%;display:flex;flex-direction:column;gap:12px;margin:8px 0}
+.about-item{display:flex;align-items:flex-start;gap:12px;padding:12px;background:#fff;border-radius:12px;border:1px solid #e5e5ea}
+.item-emoji{font-size:28px;flex-shrink:0;line-height:1}
+.item-text{flex:1;min-width:0}
+.item-title{font-weight:600;font-size:14px;color:#000;margin:0 0 2px 0}
+.item-desc{font-size:12px;color:#666;line-height:1.3;margin:0}
+.loading-tip{font-size:12px;color:#1f9d7a;background:rgba(31,157,122,0.08);padding:10px 12px;border-radius:8px;text-align:center;margin:8px 0 0 0;border-left:3px solid #1f9d7a}
+
+/* Dark theme loading screen */
+:root[data-theme="dark"] .chat-loading-screen{background:linear-gradient(135deg, #1a1a1a 0%, #0f0f13 100%)}
+:root[data-theme="dark"] .loading-content h2{color:#fff}
+:root[data-theme="dark"] .about-ai{color:#aaa}
+:root[data-theme="dark"] .about-item{background:#262626;border-color:#333}
+:root[data-theme="dark"] .item-title{color:#fff}
+:root[data-theme="dark"] .item-desc{color:#999}
+:root[data-theme="dark"] .loading-tip{color:#75e0c0;background:rgba(117,224,192,0.08);border-left-color:#75e0c0}
+:root[data-theme="dark"] .spinner{border-color:rgba(117,224,192,0.1);border-top-color:#75e0c0}
+
+/* ===== PUBLICATIONS SECTION ===== */
+.publication-container{flex:1 1 clamp(280px,45%,500px) !important;background:var(--soft);border:1px solid var(--border);text-align:left}
+.publication-header{margin-bottom:12px}
+.publication-title{font-size:1.1rem;font-weight:700;color:var(--text);margin:0;line-height:1.3;word-break:break-word}
+.publication-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;align-items:center}
+.publication-role{display:inline-block;background:rgba(36,105,79,0.1);color:#24694f;padding:4px 10px;border-radius:12px;font-size:0.85rem;font-weight:600}
+.publication-date{display:inline-block;color:var(--muted);font-size:0.9rem}
+.publication-journal{margin:10px 0;color:var(--muted);font-size:0.95rem}
+.publication-desc p{margin:0;color:var(--muted);font-size:0.9rem;line-height:1.5}
+.publication-status{margin-top:10px}
+.status-badge{display:inline-block;padding:6px 12px;border-radius:16px;font-size:0.85rem;font-weight:600}
+.status-badge.submitted{background:rgba(31,157,122,0.15);color:#1f9d7a;border:1px solid rgba(31,157,122,0.3)}
+
+/* Dark theme publications */
+:root[data-theme="dark"] .publication-role{background:rgba(117,224,192,0.1);color:#75e0c0}
+:root[data-theme="dark"] .status-badge.submitted{background:rgba(117,224,192,0.1);color:#75e0c0;border-color:rgba(117,224,192,0.3)}
+
+/* ===== COPYRIGHT BADGE ===== */
+.copyright-badge{display:inline-block;background:linear-gradient(135deg,#ff6b6b,#ff5252);color:white;width:24px;height:24px;border-radius:50%;text-align:center;line-height:24px;font-size:12px;font-weight:700;margin-left:8px;cursor:help;box-shadow:0 2px 8px rgba(255,107,107,0.3);vertical-align:middle}
+.copyright-badge:hover{transform:scale(1.1);box-shadow:0 4px 12px rgba(255,107,107,0.5)}
+
+/* Dark theme copyright badge */
+:root[data-theme="dark"] .copyright-badge{background:linear-gradient(135deg,#ff5252,#ff4081);box-shadow:0 2px 8px rgba(255,80,130,0.3)}
+:root[data-theme="dark"] .copyright-badge:hover{box-shadow:0 4px 12px rgba(255,80,130,0.5)}
