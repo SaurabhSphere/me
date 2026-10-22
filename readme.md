@@ -1,12 +1,8 @@
+# Saurabh Kumar | Full-Stack AI Engineer Portfolio 🌐
 
-----------
+Welcome to the official portfolio website of **Saurabh Kumar**, a Full-Stack AI Engineer with 2+ years of experience building production healthcare applications and AI-powered systems (Healthy Vignettes, Ex-IIT Ropar, UGC-NET Qualified 2026).
 
-```markdown
-# Saurabh Kumar | Full Stack Software Developer Portfolio 🌐
-
-Welcome to the official portfolio website of *Saurabh Kumar*, a Full Stack Software Developer with expertise in *Flutter*, *Node.js*, *JavaScript*, *TypeScript* and modern development stacks.
-
-This portfolio highlights my skills, experience, and projects while providing an easy way for potential collaborators, recruiters, and clients to connect.
+This portfolio highlights his skills, experience, research, and featured projects while providing an interactive AI Assistant for visitors and recruiters.
 
 ## 🚀 Live Demo
 
@@ -14,67 +10,55 @@ This portfolio highlights my skills, experience, and projects while providing an
 
 ## 🧩 Features
 
-- 📱 *Responsive Design*: Works seamlessly across devices.
-- 📄 *Downloadable CV*: Instantly get my resume.
-- 🧠 *Tech Stack Highlights*: Skills categorized by languages, frameworks, and tools.
-- 💼 *Project & Experience Sections*: Clean showcase of my work and development history.
-- 🌐 *Social Links*: Direct access to LinkedIn and GitHub.
+- 📱 **Responsive Design**: Works seamlessly across mobile, tablet, and desktop devices.
+- 🌙 **Dark / Light Mode**: Dynamic theme switcher with automatic preference detection.
+- 🤖 **Interactive AI Assistant**: Dual assistant modes (Chat & Image Generation) to answer questions about skills and experience.
+- 🎯 **Advanced SEO, GEO & AEO**: Rich Schema.org graph (`Person`, `FAQPage`), metadata, and citation-ready structure for Google, SearchGPT, and Perplexity.
+- 📄 **Downloadable CV**: Instant access to Saurabh's verified resume.
+- 🔒 **Human Verification**: Cloudflare Turnstile integration on the contact form.
 
 ## 🛠️ Tech Stack
 
-- *Frontend*: HTML5, CSS3, JavaScript
-- *Responsive Styling*: CSS Media Queries
-- *Version Control*: Git, GitHub
-- *DevOps & Tools*: GitHub Actions, Render
+- **Frontend**: HTML5, CSS3, Modern JavaScript (ES6+)
+- **AI & Integrations**: LLMs, Voice AI, RAG, LiveKit, FastMCP, Hugging Face, PyTorch
+- **Responsive Styling**: CSS Custom Variables & Media Queries
+- **Hosting & DevOps**: Render, Cloudflare, GitHub Actions
 
 ## 📁 Folder Structure
 
 ```plaintext
-├── assets/                # Images and icons
-├── index.html             # Main HTML file
-├── style.css              # Custom styles
-├── mediaqueries.css       # Responsive styles
-├── README.md              # Project documentation
-
+├── assets/                # Images, illustrations, icons, and PDF resume
+│   ├── js/assistant/      # Modular NVIDIA NIM client & rules engine
+├── index.html             # Main portfolio layout with rich JSON-LD Schema
+├── style.css              # Custom styling & dark/light theme definitions
+├── mediaqueries.css       # Responsive breakpoints
+├── script.js              # Theme switcher, tilt effects, chat backend client
+├── sitemap.xml            # Search engine sitemap
+├── robots.txt             # Search crawler directives
+└── readme.md              # Project documentation
 ```
 
-## 📷 Screenshots
+## 📄 How to Run Locally
 
-![Desktop View](https://saurabh-codes.onrender.com/)
+1. **Clone this repository**:
+   ```bash
+   git clone https://github.com/SaurabhSphere/me.git
+   ```
 
-![MobileView](https://saurabh-codes.onrender.com/)
+2. **Open the project**:
+   ```bash
+   cd me
+   ```
 
-## 📄 How to Use
-
-1.  **Clone this repository**:
-    
-    ```bash
-    git clone https://github.com/SaurHub123/me.git
-    
-    ```
-    
-2.  **Open the project**:
-    
-    ```bash
-    cd your-portfolio
-    
-    ```
-    
-3.  **View in browser**:  
-    Open `index.html` in your preferred browser.
-    
+3. **View in browser**:  
+   Open `index.html` in your preferred browser or serve with a local server (e.g. `npx serve .` or VS Code Live Server).
 
 ## 📬 Contact
 
--   📧 Email: [saurabhbadal7262@gmail.com](mailto:saurabhbadal7262@gmail.com)
-    
--   💼 LinkedIn: [linkedin.com/in/saurabh-linkdin](https://www.linkedin.com/in/saurabh-linkdin/)
-    
--   🧑‍💻 GitHub: [github.com/SaurHub123](https://github.com/SaurHub123)
-    
+- 📧 Email: [thedev.saurabh@gmail.com](mailto:thedev.saurabh@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/SaurabhSphere](https://www.linkedin.com/in/SaurabhSphere/)
+- 🧑‍💻 GitHub: [github.com/SaurabhSphere](https://github.com/SaurabhSphere)
 
-----------
+---
 
 📝 Built with ❤️ by **Saurabh Kumar**
-
-````

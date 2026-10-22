@@ -404,10 +404,12 @@ img{max-width:100%;height:auto;display:block}
 .publication-status{margin-top:10px}
 .status-badge{display:inline-block;padding:6px 12px;border-radius:16px;font-size:0.85rem;font-weight:600}
 .status-badge.submitted{background:rgba(31,157,122,0.15);color:#1f9d7a;border:1px solid rgba(31,157,122,0.3)}
+.status-badge.qualified{background:rgba(99,102,241,0.15);color:#6366f1;border:1px solid rgba(99,102,241,0.3)}
 
 /* Dark theme publications */
 :root[data-theme="dark"] .publication-role{background:rgba(117,224,192,0.1);color:#75e0c0}
 :root[data-theme="dark"] .status-badge.submitted{background:rgba(117,224,192,0.1);color:#75e0c0;border-color:rgba(117,224,192,0.3)}
+:root[data-theme="dark"] .status-badge.qualified{background:rgba(165,180,252,0.15);color:#a5b4fc;border-color:rgba(165,180,252,0.3)}
 
 /* ===== COPYRIGHT BADGE ===== */
 .copyright-badge{display:inline-block;background:linear-gradient(135deg,#ff6b6b,#ff5252);color:white;width:24px;height:24px;border-radius:50%;text-align:center;line-height:24px;font-size:12px;font-weight:700;margin-left:8px;cursor:help;box-shadow:0 2px 8px rgba(255,107,107,0.3);vertical-align:middle}

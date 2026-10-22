@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vaniGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#31104b" />
+    </linearGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#vaniGrad)" />
+  <circle cx="300" cy="150" r="85" fill="#4338ca" opacity="0.25" filter="url(#glow)"/>
+  <circle cx="300" cy="150" r="55" fill="#6366f1" opacity="0.4"/>
+  <!-- Microphone & Soundwave Icon -->
+  <g transform="translate(270, 115) scale(1.1)" stroke="url(#waveGrad)" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="18" y="10" width="18" height="30" rx="9" fill="#818cf8" opacity="0.3"/>
+    <rect x="18" y="10" width="18" height="30" rx="9"/>
+    <path d="M10 24c0 7.7 6.3 14 14 14s14-6.3 14-14"/>
+    <line x1="24" y1="38" x2="24" y2="48"/>
+    <line x1="16" y1="48" x2="32" y2="48"/>
+  </g>
+  <!-- Soundwaves -->
+  <path d="M190 150 Q205 120 220 150 T250 150" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" opacity="0.8"/>
+  <path d="M350 150 Q380 110 410 150 T440 150" fill="none" stroke="#c084fc" stroke-width="3.5" stroke-linecap="round" opacity="0.8"/>
+  <text x="300" y="250" text-anchor="middle" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="28" font-weight="700" letter-spacing="1">Vani • Voice Healthcare AI</text>
+  <text x="300" y="285" text-anchor="middle" fill="#94a3b8" font-family="'Poppins', sans-serif" font-size="14" font-weight="500">LiveKit • Plivo • FastMCP • STT/TTS • LLM</text>
+</svg>

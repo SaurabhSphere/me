@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="annoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="50%" stop-color="#27272a" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#annoGrad)" />
+  <circle cx="300" cy="140" r="70" fill="#a855f7" opacity="0.2"/>
+  <!-- Bounding box / Pose keypoints -->
+  <g transform="translate(265, 100)" stroke="#c084fc" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="10" y="10" width="50" height="60" stroke-dasharray="4 4"/>
+    <circle cx="35" cy="25" r="4" fill="#a855f7"/>
+    <circle cx="25" cy="45" r="4" fill="#38bdf8"/>
+    <circle cx="45" cy="45" r="4" fill="#38bdf8"/>
+    <line x1="35" y1="29" x2="25" y2="41"/>
+    <line x1="35" y1="29" x2="45" y2="41"/>
+  </g>
+  <text x="300" y="245" text-anchor="middle" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="26" font-weight="700">AnnoForge • CV Annotation</text>
+  <text x="300" y="278" text-anchor="middle" fill="#e9d5ff" font-family="'Poppins', sans-serif" font-size="14" font-weight="500">React • Konva • YOLOv8 • Segmentation & Detection</text>
+</svg>

@@ -3,7 +3,7 @@
 const SITE_CONFIG = {
   linkedin: 'https://www.linkedin.com/in/SaurabhSphere/',
   github:   'https://github.com/SaurabhSphere',
-  email:    'Saurabhbadal7262@gmail.com',
+  email:    'thedev.saurabh@gmail.com',
   siteUrl:  'https://saurabh-codes.onrender.com/',
 };
 
@@ -30,13 +30,22 @@ function applySiteConfig(){
     }
   });
 
-  // Update JSON-LD schema sameAs
+  // Update JSON-LD schema sameAs & url
   const schemaScript = document.querySelector('script[type="application/ld+json"]');
   if(schemaScript){
     try{
       const schema = JSON.parse(schemaScript.textContent);
-      schema.sameAs = [SITE_CONFIG.linkedin, SITE_CONFIG.github].filter(Boolean);
-      schema.url = SITE_CONFIG.siteUrl || schema.url;
+      const links = [SITE_CONFIG.linkedin, SITE_CONFIG.github].filter(Boolean);
+      if(schema && schema['@graph'] && Array.isArray(schema['@graph'])){
+        const person = schema['@graph'].find(node => node['@type'] === 'Person');
+        if(person){
+          person.sameAs = links;
+          person.url = SITE_CONFIG.siteUrl || person.url;
+        }
+      } else if(schema){
+        schema.sameAs = links;
+        schema.url = SITE_CONFIG.siteUrl || schema.url;
+      }
       schemaScript.textContent = JSON.stringify(schema, null, 2);
     }catch(e){ console.warn('Failed to update schema:', e); }
   }
