@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="afroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#451a03" />
+      <stop offset="50%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#1c1917" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#afroGrad)" />
+  <circle cx="300" cy="140" r="70" fill="#f59e0b" opacity="0.2"/>
+  <!-- Translate Globe / Languages -->
+  <g transform="translate(265, 100)" stroke="#fde68a" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="35" cy="40" r="28" fill="#d97706" fill-opacity="0.3"/>
+    <ellipse cx="35" cy="40" rx="14" ry="28"/>
+    <line x1="7" y1="40" x2="63" y2="40"/>
+  </g>
+  <text x="300" y="245" text-anchor="middle" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="26" font-weight="700">Afrolingual • Translation</text>
+  <text x="300" y="278" text-anchor="middle" fill="#fde68a" font-family="'Poppins', sans-serif" font-size="14" font-weight="500">Meta NLLB • FastAPI • Multilingual Speech Processing</text>
+</svg>

@@ -5,25 +5,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Saurabh Kumar | Project Associate IIT Ropar</title>
-  <meta name="description" content="Saurabh Kumar is a Full Stack Software Developer skilled in Flutter, Node.js, and modern web technologies. Explore my projects, experience, and contact me for collaboration." />
-  <meta name="keywords" content="Saurabh Kumar, Software Developer, Full Stack Developer, Flutter, Node.js, Portfolio" />
-  <meta name="author" content="Saurabh Kumar" />
-  <link rel="icon" href="assets/favicon.ico" />
+  <title>Saurabh Kumar | Full-Stack AI Engineer | Ex-IIT Ropar | Healthcare AI, LLMs & Voice Agents</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Saurabh Kumar | Project Associate IIT Ropa" />
-  <meta property="og:description" content="Explore my experience and projects as a Full Stack Developer skilled in Flutter, Node.js, and more." />
+  <meta name="description" content="Saurabh Kumar is a Full-Stack AI Engineer at Healthy Vignettes and former Project Associate at IIT Ropar. Specializes in Healthcare AI, Voice AI agents, EHR platforms, RAG systems, and LLM fine-tuning in HIPAA/SOC 2 environments. UGC-NET qualified." />
+
+  <meta name="keywords" content="Saurabh Kumar, AI Engineer, IIT Ropar, Healthy Vignettes, Voice AI Engineer, Healthcare AI, LLM Fine-Tuning, RAG Systems, HIPAA, SOC 2, FastMCP, LiveKit, Full Stack Developer, UGC NET, React, Node.js, Python, FastAPI, Portfolio" />
+
+  <meta name="author" content="Saurabh Kumar" />
+  <link rel="canonical" href="https://saurabh-codes.onrender.com/" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="icon" href="./assets/favicon.ico" />
+
+  <!-- Open Graph / GEO / Social -->
+  <meta property="og:title" content="Saurabh Kumar | Full-Stack AI Engineer | Ex-IIT Ropar" />
+  <meta property="og:description" content="Full-Stack AI Engineer specializing in Healthcare AI, Voice AI agents, EHR platforms, LLMs, and scalable distributed systems." />
   <meta property="og:url" content="https://saurabh-codes.onrender.com/" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://saurabh-codes.onrender.com/assets/saurabh-kumar-iit-ropar-ai-engineer.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Saurabh Kumar | Project Associate IIT Ropa" />
-  <meta name="twitter:description" content="Portfolio showcasing my skills in Flutter, Node.js, and full-stack development." />
+  <meta name="twitter:title" content="Saurabh Kumar | Full-Stack AI Engineer | Ex-IIT Ropar" />
+  <meta name="twitter:description" content="Portfolio showcasing Healthcare AI systems, Voice AI agents, EHR platforms, LLMs, and IIT Ropar research." />
+  <meta name="twitter:image" content="https://saurabh-codes.onrender.com/assets/saurabh-kumar-iit-ropar-ai-engineer.png" />
 
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./mediaqueries.css" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
   <!-- Desktop Nav -->
@@ -32,6 +40,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#publications">Publications</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -46,6 +55,7 @@
       <div class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
         <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#publications" onclick="toggleMenu()">Publications</a></li>
         <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
       </div>
@@ -56,19 +66,20 @@
   <!-- Profile -->
   <section id="profile" data-reveal="up">
     <div class="section__pic-container">
-      <img src="./assets/profile-pic-removebg-preview.png" alt="Saurabh Kumar profile picture" />
+    <img  src="https://saurabh-codes.onrender.com/assets/saurabh-kumar-iit-ropar-ai-engineer.png" alt="Saurabh Kumar AI Engineer IIT Ropar profile photo"/>
+
     </div>
     <div class="section__text">
       <p class="section__text__p1">Hello, I'm</p>
       <h1 class="title">Saurabh</h1>
-      <p class="section__text__p2">Project Associate - I</p>
+      <p class="section__text__p2">Full Stack AI Engineer<br/><span style="font-size:1.15rem;font-weight:400;opacity:0.85">Ex-Project Associate - I @ IIT Ropar</span></p>
       <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('assets/Saurabh_Kumar_IIT_Ropar.pdf')">Download CV</button>
+        <button class="btn btn-color-2" onclick="window.open('./assets/Saurabh_Kumar_IIT_Ropar.pdf')">Download CV</button>
         <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
       </div>
       <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://www.linkedin.com/in/saurabh-linkdin/'" />
-        <img src="./assets/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com/SaurHub123'" />
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" data-link="linkedin" />
+        <img src="./assets/github.png" alt="GitHub" class="icon" data-link="github" />
       </div>
     </div>
   </section>
@@ -81,7 +92,7 @@
     <!-- MOBILE-FRIENDLY STACK (no overlap) -->
     <div class="section-container about-stack">
       <div class="section__pic-container about-media">
-        <img src="./assets/about-pic-removebg-preview.png" alt="Profile picture" class="about-pic" />
+        <img src="./assets/about-pic-removebg-preview.png"  alt="Saurabh Kumar AI Engineer IIT Ropar profile photo" class="about-pic" />
       </div>
 
       <div class="about-details-container">
@@ -89,20 +100,21 @@
           <div class="details-container">
             <img src="./assets/experience.png" alt="Experience icon" class="icon" />
             <h3>Experience</h3>
-            <p>1+ years<br/>Software Development</p>
+            <p>2+ years<br/>Healthcare AI & Full-Stack Systems</p>
           </div>
           <div class="details-container">
             <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
-            <p>MCA<br/>CHandigarh University</p>
+            <h3>Education & Honors</h3>
+            <p>UGC-NET Qualified (2026)<br/>MCA — Chandigarh University (CGPA: 8.03)</p>
           </div>
         </div>
 
         <div class="text-container">
           <p>
-            I'm Saurabh Kumar, a Project Associate-I at iHub-AWaDH, IIT Ropar, working on LLM and RAG-based AI systems.
-            I build scalable web and mobile applications using Flutter, Node.js, and AWS, with experience in healthcare and management platforms. 
-            Alongside my full-time role, I also work as a freelance developer, helping clients build efficient, user-focused digital solutions
+            Full-Stack Engineer with 2+ years of experience building production healthcare applications and AI-powered systems. Strong in React, TypeScript, Node.js, Python, FastAPI, SQL/NoSQL, AWS, and REST APIs. Experience with EHR systems, payment integrations (Razorpay & Stripe), RAG applications, voice AI agents, LLM fine-tuning, and AI evaluation within HIPAA and SOC 2 environments.
+          </p>
+          <p style="margin-top:0.75rem">
+            Former Project Associate I at <strong>IIT Ropar</strong> specializing in task-specific NLP model experimentation and evaluation pipelines. UGC-NET qualified (2026) with deep interests in applied AI, healthcare intelligence, and industry-aligned PhD research collaborations.
           </p>
         </div>
       </div>
@@ -119,19 +131,41 @@
         <li class="xt__item">
           <div class="xt__card">
             <header class="xt__head">
-              <img src="./assets/AWaDH-Logo.png" alt="iHub-AWaDH @ IIT Ropar logo" class="xt__logo" />
+              <img src="./assets/healthy vignettes.jpg" alt="Healthy Vignettes logo" class="xt__logo" />
               <div class="xt__roleblock">
-                <h3 class="xt__role">Project Associate-1</h3>
-                <p class="xt__company">iHub-AWaDH @ IIT Ropar</p>
+                <h3 class="xt__role">Full Stack AI Engineer</h3>
+                <p class="xt__company">Healthy Vignettes</p>
               </div>
-              <p class="xt__dates">Oct 2025 – Present</p>
+              <p class="xt__dates">July 2026 – Present</p>
             </header>
             <ul class="xt__list">
               <li class="xt__chips">
-                <span>LLM</span><span>Fine-Tuning</span><span>RAG</span><span>AWS</span><span>Terraform</span>
+                <span>React/TypeScript</span><span>Node.js</span><span>Python/FastAPI</span><span>AWS</span><span>RAG</span><span>Voice AI</span><span>HIPAA & SOC 2</span>
               </li>
-              <li>Contributed to innovative projects using modern web technologies.</li>
-              <li>Managed cloud infrastructure with AWS and Terraform.</li>
+              <li>Own end-to-end development of healthcare products across React/TypeScript, Node.js, Python/FastAPI, databases, AI integrations, and AWS.</li>
+              <li>Extended an EHR platform with billing, patient wallet, pharmacy, investigations, referrals, consultations, diagnostic tests, and medical imaging workflows.</li>
+              <li>Built healthcare APIs connecting clinical, billing, pharmacy, and payment workflows; integrated Razorpay and Stripe.</li>
+              <li>Developed LLM/RAG-based insurance intelligence and a voice AI system for patient-facing healthcare workflows within HIPAA and SOC 2 requirements.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="xt__item">
+          <div class="xt__card">
+            <header class="xt__head">
+              <img src="./assets/AWaDH-Logo.png" alt="iHub-AWaDH @ IIT Ropar logo" class="xt__logo" />
+              <div class="xt__roleblock">
+                <h3 class="xt__role">Project Associate - I</h3>
+                <p class="xt__company">iHub-AWaDH @ IIT Ropar</p>
+              </div>
+              <p class="xt__dates">Oct 2025 – July 2026</p>
+            </header>
+            <ul class="xt__list">
+              <li class="xt__chips">
+                <span>LLMs</span><span>Fine-Tuning</span><span>NLP</span><span>Evaluation Pipelines</span><span>AWS</span><span>Terraform</span>
+              </li>
+              <li>Fine-tuned large language models and experimented with neural network architectures for task-specific NLP applications.</li>
+              <li>Built automated evaluation pipelines and data-processing workflows covering dataset curation, inference, and model performance analysis.</li>
             </ul>
           </div>
         </li>
@@ -147,9 +181,9 @@
               <p class="xt__dates">March 2024 – Oct 2025</p>
             </header>
             <ul class="xt__list">
-              <li class="xt__chips"><span>Flutter</span><span>Node.js</span><span>IBM AS/400</span></li>
-              <li>Enhanced app features with backend integration using Node.js.</li>
-              <li>Optimized app performance and fixed bugs.</li>
+              <li class="xt__chips"><span>Flutter</span><span>Node.js</span><span>TypeScript</span><span>IBM AS/400</span><span>IIS</span></li>
+              <li>Built and maintained a production Flutter application for digital hospital services and patient workflows.</li>
+              <li>Developed Node.js/TypeScript REST APIs integrated with hospital information systems and managed backend services on IIS.</li>
             </ul>
           </div>
         </li>
@@ -160,46 +194,51 @@
   <!-- Skills/Experience -->
   <section id="experience" data-reveal="up">
     <!-- <p class="section__text__p1">Explore My</p> -->
-    <h1 class="title">Experience</h1>
+    <h1 class="title">Skills &amp; Expertise</h1>
     <div class="experience-details-container">
       <div class="about-containers">
         <!-- Languages -->
         <div class="details-container">
           <h2 class="experience-sub-title">Languages</h2>
           <div class="article-container">
+            <article><img src="https://img.icons8.com/color/48/typescript.png" alt="typescript" /><div><h3>TypeScript</h3><p>Experienced</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript" /><div><h3>JavaScript</h3><p>Experienced</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/python.png" alt="python" /><div><h3>Python</h3><p>Experienced</p></div></article>
             <article><img src="https://img.icons8.com/color/48/dart.png" alt="dart" /><div><h3>Dart</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/color/48/c-plus-plus-logo.png" alt="c++" /><div><h3>C / C++</h3><p>Intermediate</p></div></article>
-                        <article><img src="https://img.icons8.com/color/48/python.png" alt="python" /><div><h3>Python</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/fluency/48/java-coffee-cup-logo.png" alt="java" /><div><h3>Java</h3><p>Beginner</p></div></article>
-            <article><img src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript" /><div><h3>JavaScript</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/color/48/typescript.png" alt="typescript" /><div><h3>TypeScript</h3><p>Intermediate</p></div></article>
-
           </div>
         </div>
 
-        <!-- Frameworks -->
+        <!-- Frontend -->
         <div class="details-container">
-          <h2 class="experience-sub-title">Frameworks</h2>
+          <h2 class="experience-sub-title">Frontend</h2>
           <div class="article-container">
-            <article><img src="https://img.icons8.com/color/48/flutter.png" alt="flutter" /><div><h3>Flutter</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/fluency/48/node-js.png" alt="node-js" /><div><h3>Node.js</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/offices/40/express-js.png" alt="express-js" /><div><h3>Express.js</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/color/48/nextjs.png" alt="nextjs" /><div><h3>Next.js</h3><p>Beginner</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/react-native.png" alt="reactjs" /><div><h3>React.js</h3><p>Experienced</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/nextjs.png" alt="nextjs" /><div><h3>Next.js</h3><p>Intermediate</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/flutter.png" alt="flutter" /><div><h3>Flutter</h3><p>Experienced</p></div></article>
           </div>
         </div>
 
-        <!-- Tools & Platforms -->
+        <!-- Backend -->
         <div class="details-container">
-          <h2 class="experience-sub-title">Tools & Platforms</h2>
+          <h2 class="experience-sub-title">Backend</h2>
           <div class="article-container">
-            <article><img src="https://img.icons8.com/color/48/git.png" alt="git" /><div><h3>Git</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/ios-filled/50/github.png" alt="github" /><div><h3>GitHub Actions (CI/CD)</h3><p>Intermediate</p></div></article>
-            <article><img src="https://images.seeklogo.com/logo-png/27/2/pm2-logo-png_seeklogo-273807.png" alt="pm2" /><div><h3>PM2</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/color/48/terraform.png" alt="terraform" /><div><h3>Terraform</h3><p>Beginner</p></div></article>
-            <article><img src="https://img.icons8.com/clouds/48/cloud.png" alt="render" /><div><h3>Render</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/windows/32/windows-10.png" alt="windows-iis" /><div><h3>Windows IIS Server</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/color/48/firebase.png" alt="firebase" /><div><h3>Firebase</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/color/48/amazon-web-services.png" alt="aws" /><div><h3>AWS (S3, RDS, EC2)</h3><p>Intermediate</p></div></article>
+            <article><img src="https://img.icons8.com/fluency/48/node-js.png" alt="node-js" /><div><h3>Node.js</h3><p>Experienced</p></div></article>
+            <article><img src="https://img.icons8.com/offices/40/express-js.png" alt="express-js" /><div><h3>Express.js</h3><p>Experienced</p></div></article>
+            <article><img src="./assets/FastAPI.png" alt="fastapi" /><div><h3>FastAPI</h3><p>Experienced</p></div></article>
+            <article><img src="https://img.icons8.com/fluency/48/api-settings.png" alt="rest-apis" /><div><h3>REST APIs</h3><p>Experienced</p></div></article>
+          </div>
+        </div>
+
+        <!-- AI / ML -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">AI / ML &amp; Agents</h2>
+          <div class="article-container">
+            <article><img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="llm" /><div><h3>LLMs &amp; Fine-Tuning</h3><p>LoRA / QLoRA</p></div></article>
+            <article><img src="https://img.icons8.com/fluency/48/microphone.png" alt="voice-ai" /><div><h3>Voice AI Agents</h3><p>LiveKit / STT / TTS</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/workflow.png" alt="mcp" /><div><h3>AI Agents &amp; MCP</h3><p>FastMCP / Tool-use</p></div></article>
+            <article><article style="display:contents"><img src="https://img.icons8.com/color/48/chain.png" alt="rag" /><div><h3>RAG Systems</h3><p>Advanced Retrieval</p></div></article></article>
+            <article><img src="https://img.icons8.com/color/48/pytorch.png" alt="pytorch" /><div><h3>PyTorch &amp; Hugging Face</h3><p>Model Inference</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/settings--v1.png" alt="nlp" /><div><h3>NLP &amp; Evaluation</h3><p>Pipelines &amp; Benchmarks</p></div></article>
           </div>
         </div>
 
@@ -207,75 +246,233 @@
         <div class="details-container">
           <h2 class="experience-sub-title">Databases</h2>
           <div class="article-container">
-            <article><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png" alt="mongodb" /><div><h3>MongoDB</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/windows/32/postgreesql.png" alt="postgresql" /><div><h3>PostgreSQL</h3><p>Intermediate</p></div></article>
-            <article><img src="https://img.icons8.com/windows/32/mysql.png" alt="mysql" /><div><h3>MySQL</h3><p>Intermediate</p></div></article>
+            <article><img src="https://img.icons8.com/windows/32/postgreesql.png" alt="postgresql" /><div><h3>PostgreSQL</h3><p>Experienced</p></div></article>
+            <article><img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png" alt="mongodb" /><div><h3>MongoDB</h3><p>Experienced</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/redis.png" alt="redis" /><div><h3>Redis</h3><p>Intermediate</p></div></article>
             <article><img src="https://img.icons8.com/ios-filled/50/database.png" alt="db2" /><div><h3>IBM DB2</h3><p>Intermediate</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/database.png" alt="chromadb" /><div><h3>ChromaDB &amp; Pinecone</h3><p>Vector Search</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/firebase.png" alt="firebase" /><div><h3>Firebase</h3><p>Intermediate</p></div></article>
+          </div>
+        </div>
+
+        <!-- Cloud, DevOps & Healthcare Security -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Cloud, Security &amp; Payments</h2>
+          <div class="article-container">
+            <article><img src="https://img.icons8.com/color/48/amazon-web-services.png" alt="aws" /><div><h3>AWS</h3><p>Cloud Architecture</p></div></article>
+            <article><img src="./assets/Cloudflare.png" alt="cloudflare" /><div><h3>Cloudflare</h3><p>Tunneling &amp; R2</p></div></article>
+            <article><img src="https://img.icons8.com/ios-filled/50/github.png" alt="github-actions" /><div><h3>GitHub Actions</h3><p>CI/CD Pipelines</p></div></article>
+            <article><img src="https://img.icons8.com/fluency/48/security-checked.png" alt="compliance" /><div><h3>HIPAA &amp; SOC 2</h3><p>Healthcare Standards</p></div></article>
+            <article><img src="https://img.icons8.com/fluency/48/hospital.png" alt="ehr" /><div><h3>EHR / EMR APIs</h3><p>Clinical Workflows</p></div></article>
+            <article><img src="https://img.icons8.com/color/48/stripe.png" alt="payments" /><div><h3>Razorpay &amp; Stripe</h3><p>Billing &amp; Wallets</p></div></article>
           </div>
         </div>
       </div>
 
-      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#publications'" />
     </div>
+  </section>
+
+  <!-- Research & Publications -->
+  <section id="publications" data-reveal="up">
+    <h1 class="title">Research &amp; Qualifications</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container publication-container">
+          <div class="publication-header">
+            <h3 class="publication-title">UGC-NET Qualified — Computer Science &amp; Applications (2026)</h3>
+            <div class="publication-meta">
+              <span class="publication-role">National Eligibility</span>
+              <span class="publication-date">2026</span>
+            </div>
+          </div>
+          <div class="publication-desc">
+            <p>Eligible for Assistant Professorship and PhD research in Computer Science &amp; Engineering. Research focus spans <strong>applied AI, Computer Vision, LLMs, and agentic systems</strong>. Open to industry-supported PhD opportunities and research collaborations aligned with real-world products.</p>
+          </div>
+          <div class="publication-status">
+            <span class="status-badge qualified">UGC-NET Qualified ✓</span>
+          </div>
+        </div>
+
+        <div class="details-container publication-container">
+          <div class="publication-header">
+            <h3 class="publication-title">A Multi-Curricula Dataset and Benchmark for Elementary-level Math Word Problem Generation</h3>
+            <div class="publication-meta">
+              <span class="publication-role">Co-author</span>
+              <span class="publication-date">April 2026</span>
+            </div>
+          </div>
+          <p class="publication-journal">
+            <strong>Submitted to:</strong> Language Resources and Evaluation (Springer)
+          </p>
+          <div class="publication-desc">
+            <p>Research on dataset development and benchmarking methodologies for elementary-level math word problem generation systems, conducted during tenure at IIT Ropar.</p>
+          </div>
+          <div class="publication-status">
+            <span class="status-badge submitted">Submitted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
   </section>
 
   <!-- Projects -->
   <section id="projects" data-reveal="up">
     <!-- <p class="section__text__p1">Browse My Recent</p> -->
-    <h1 class="title">Projects</h1>
+    <h1 class="title">Featured Projects</h1>
     <div class="experience-details-container">
       <div class="about-containers">
+        <!-- Vani -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/vani-voice-ai.svg" alt="Vani Voice Healthcare AI Agent" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Vani — Voice Healthcare AI</h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">Voice-to-voice healthcare agent enabling patients to interact naturally for appointment booking, cancellations, dosages, and patient support queries.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> Plivo, LiveKit, STT/TTS, FastMCP, LLM, Python</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='#contact'">Contact Demo</button>
+          </div>
+        </div>
+
+        <!-- Insurance AI Assistant -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/insurance-ai-rag.svg" alt="Insurance AI Assistant" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Insurance AI Assistant (RAG)</h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">RAG-based insurance intelligence allowing receptionists to instantly query policies. Serves as foundation for automated claim assistance &amp; denial prediction.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> LLMs, RAG, Hugging Face, ChromaDB, Python</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='#contact'">Architecture</button>
+          </div>
+        </div>
+
+        <!-- EHR Platform -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/ehr-healthcare.svg" alt="EHR Healthcare Management System" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">EHR Healthcare Platform</h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">Production healthcare modules covering billing, patient wallet, pharmacy, diagnostic tests, medical imaging, and HIPAA/SOC 2 compliant workflows.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> React, TypeScript, Node.js, Python, SQL, Razorpay, Stripe</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='#contact'">Case Study</button>
+          </div>
+        </div>
+
+        <!-- Afrolingual -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/afrolingual.svg" alt="Afrolingual Multilingual Translation" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Afrolingual — Translation</h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">English/French to African local-language translation system leveraging Meta's NLLB model with low-latency FastAPI inference services.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> Meta NLLB, FastAPI, Speech Processing, PyTorch</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='#contact'">Details</button>
+          </div>
+        </div>
+
+        <!-- AnnoForge -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/annoforge.svg" alt="AnnoForge Computer Vision Annotation Platform" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">AnnoForge <span class="copyright-badge" title="Copyright Registered Software">©</span></h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">Browser-based annotation platform for segmentation &amp; object-detection datasets used in deep learning workflows including YOLOv8.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> React.js, JavaScript, Canvas/Konva, Local Storage</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://pixelsuite-pi.vercel.app/'">Live Demo</button>
+          </div>
+        </div>
+
+        <!-- TMC Punjab Saarthi -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/TMC%20Punjab%20Saarthi.png" alt="TMC Punjab Saarthi" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">TMC Punjab Saarthi</h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">Production mobile app for Tata Memorial Centre (HBCH&amp;RC) enabling OPD registration, patient records, and hospital workflow automation.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> Flutter, Node.js, IBM DB2, Firebase, Windows IIS</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://play.google.com/store/apps/details?id=com.hbchrcm&pcampaignid=web_share'">Play Store</button>
+          </div>
+        </div>
+
+        <!-- Manya Healthcare -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/manyahealthcare.png" alt="Manya Healthcare" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Manya Healthcare</h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">Healthcare equipment rental, inventory, damage tracking, payments, feedback &amp; callback management.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> React.js, Node.js, Express, MongoDB</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://manyahealthcare.netlify.app/'">Live Demo</button>
+          </div>
+        </div>
+
+        <!-- Select Sports -->
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Select%20Sports.jpg" alt="Select Sports" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Select Sports</h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">E-commerce and sports turf booking platform with real-time inventory and slot reservations.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> Flutter, Next.js, PostgreSQL, Firebase, AWS S3, TypeScript</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='http://3.6.39.216/'">Live Demo</button>
+          </div>
+        </div>
+
+        <!-- waste2wealth -->
         <div class="details-container color-container">
           <div class="article-container">
             <img src="./assets/waste2wealth.png" alt="waste2wealth" class="project-img" />
           </div>
           <h2 class="experience-sub-title project-title">waste2wealth</h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">Sustainable waste management and recycling platform. Awarded 2nd Place at Project Expo (2023).</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> React.js, Node.js, Express, MongoDB</p>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SaurHub123'">Github</button>
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
             <button class="btn btn-color-2 project-btn" onclick="location.href='https://waste2wealth-umber.vercel.app/'">Live Demo</button>
           </div>
         </div>
 
+        <!-- PoseForge -->
         <div class="details-container color-container">
           <div class="article-container">
-            <img src="./assets/TMC Punjab Saarthi.png" alt="TMC Punjab Saarthi" class="project-img" />
+            <img src="./assets/PoseForge.png" alt="PoseForge" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">TMC Punjab Saarthi</h2>
+          <h2 class="experience-sub-title project-title">PoseForge <span class="copyright-badge" title="Copyright Software">©</span></h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">Image annotation tool for pose estimation and keypoint labeling with local browser data storage.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> JavaScript, HTML5 Canvas, Local Storage</p>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SaurHub123'">Github</button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://play.google.com/store/apps/details?id=com.hbchrcm&pcampaignid=web_share'">Live Demo</button>
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://pixelsuite-pi.vercel.app/'">Live Demo</button>
           </div>
         </div>
 
-        <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/Select Sports.jpg" alt="Select Sports" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Select Sports</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SaurHub123'">Github</button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='http://3.6.39.216/'">Live Demo</button>
-          </div>
-        </div>
-
-                <div class="details-container color-container">
-          <div class="article-container">
-            <img src="./assets/csio-annotater.png" alt="Select Sports" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Polygon Image annotater for CSIR-CSIO Chandigarh</h2>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SaurHub123/React-Learning'">Github</button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://csio-annotater.netlify.app/'">Live Demo</button>
-          </div>
-        </div>
-
+        <!-- N-Queen Games -->
         <div class="details-container color-container">
           <div class="article-container">
             <img src="./assets/nQueens.png" alt="N-Queen Games" class="project-img" />
           </div>
           <h2 class="experience-sub-title project-title">N-Queen Games</h2>
+          <p style="font-size:0.85rem;padding:0 1rem;opacity:0.8;margin-bottom:0.5rem;">Interactive algorithmic puzzle and backtracking visualizer for the classic N-Queens problem.</p>
+          <p style="font-size:0.75rem;padding:0 1rem;color:var(--muted);margin-bottom:0.75rem;"><strong>Tech:</strong> JavaScript, HTML5, CSS3, Algorithms</p>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/SaurHub123'">Github</button>
+            <button class="btn btn-color-2 project-btn" data-link="github">Github</button>
             <button class="btn btn-color-2 project-btn" onclick="location.href='https://saurhub123.github.io/N-Queens/'">Play</button>
           </div>
         </div>
@@ -291,11 +488,16 @@
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
         <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:Saurabhbadal7262@gmail.com">Gmail</a></p>
+        <p><a data-link="email">Gmail</a></p>
+      </div>
+      <div id="turnstile-container" style="margin-left:1rem;">
+        <h3 style="margin:0 0 0.5rem 0;font-size:1rem">Human verification</h3>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAADKG5DzQf9HkaLowt292xO6eFyY" data-callback="onTurnstileSuccess"></div>
+        <p id="turnstile-status" style="font-size:0.9rem;opacity:0.85;margin-top:0.25rem">Not verified</p>
       </div>
       <div class="contact-info-container">
         <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/saurabh-linkdin/">LinkedIn</a></p>
+        <p><a data-link="linkedin">LinkedIn</a></p>
       </div>
     </div>
   </section>
@@ -306,29 +508,248 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#publications">Publications</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <p>Last updated: <span id="last-updated">Dec 1]\
-       2025</span></p>
+    <p>Last updated: <span id="last-updated">Dec 1 2025</span></p>
     <p>Copyright &#169; 2025 Saurabh Kumar. All Rights Reserved.</p>
   </footer>
 
-  <!-- Schema -->
+  <!-- Schema (SEO, GEO & AEO Optimized) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Saurabh Kumar",
-    "url": "https://saurabh-codes.onrender.com/",
-    "sameAs": ["https://www.linkedin.com/in/saurabh-linkdin/", "https://github.com/SaurHub123"],
-    "jobTitle": "Software Developer",
-    "worksFor": { "@type": "Organization", "name": "Freelancer/Company" }
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://saurabh-codes.onrender.com/#person",
+        "name": "Saurabh Kumar",
+        "alternateName": ["Saurabh", "thedev.saurabh"],
+        "url": "https://saurabh-codes.onrender.com/",
+        "image": "https://saurabh-codes.onrender.com/assets/saurabh-kumar-iit-ropar-ai-engineer.png",
+        "jobTitle": "Full Stack AI Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Healthy Vignettes"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "IIT Ropar",
+            "url": "https://www.iitrpr.ac.in/"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Chandigarh University"
+          }
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "UGC-NET Qualified (2026)",
+            "credentialCategory": "National Eligibility Test for Assistant Professorship & PhD in Computer Science & Applications"
+          }
+        ],
+        "knowsAbout": [
+          "Artificial Intelligence",
+          "Large Language Models (LLMs)",
+          "Voice AI Agents",
+          "Retrieval-Augmented Generation (RAG)",
+          "Healthcare Information Systems (EHR/EMR)",
+          "HIPAA & SOC 2 Compliance",
+          "FastAPI",
+          "Python",
+          "Node.js",
+          "React.js",
+          "TypeScript",
+          "Cloud Infrastructure (AWS)"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/SaurabhSphere/",
+          "https://github.com/SaurabhSphere"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://saurabh-codes.onrender.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is Saurabh Kumar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Saurabh Kumar is a Full-Stack AI Engineer with 2+ years of experience building production healthcare applications and AI-powered systems, former Project Associate at IIT Ropar, and UGC-NET qualified (2026)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What was Saurabh Kumar's role at IIT Ropar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At IIT Ropar (iHub-AWaDH), Saurabh Kumar worked as Project Associate I fine-tuning large language models, experimenting with task-specific NLP architectures, building automated evaluation pipelines, and co-authoring benchmark research on elementary math word problem generation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What healthcare AI systems has Saurabh Kumar built?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Saurabh has built Vani (a voice-to-voice healthcare AI agent using LiveKit, STT/TTS, and FastMCP), an Insurance AI Assistant using RAG for policy intelligence and denial prediction, and production EHR platforms handling billing, patient wallets, pharmacy, and medical imaging under HIPAA/SOC 2 environments."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are Saurabh Kumar's technical skills?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Saurabh's core stack includes TypeScript, Python, Node.js, FastAPI, React.js, Next.js, Flutter, AWS, PostgreSQL, MongoDB, ChromaDB, Pinecone, LLMs, Voice AI, RAG, and healthcare security standards (HIPAA, SOC 2)."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 
-  <script src="script.js"></script>
+  <!-- Chat FAB Label -->
+  <div id="fabLabelContainer" class="fab-label-container">
+    <div class="fab-label">✨ Ask AI</div>
+  </div>
+  
+  <!-- Chat FAB + Modal -->
+  <button id="chatFab" class="floating-fab-chat" aria-label="Open chat">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z" fill="currentColor" />
+    </svg>
+  </button>
+
+  <div id="chatOverlay" class="chat-overlay" aria-hidden="true">
+    <div class="chat-shell" role="dialog" aria-modal="true" aria-label="Saurabh AI chat">
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="topbar-avatar">S</div>
+          <div class="topbar-info">
+            <div class="title">Saurabh</div>
+            <div class="topbar-status">
+              Online <span id="topbarMode" class="topbar-mode" style="display:none"></span>
+            </div>
+          </div>
+        </div>
+        <div class="topbar-icons">
+          <button id="chatClose" class="chat-close" aria-label="Close chat">✕</button>
+        </div>
+      </div>
+      
+      <!-- Mode Selection Modal -->
+      <div id="modeModal" class="mode-modal-overlay">
+        <div class="mode-modal">
+          <h3>Choose Mode</h3>
+          <p>What would you like to do?</p>
+          <div class="mode-buttons">
+            <button id="chatModeBtn" class="mode-btn">💬 Chat</button>
+            <button id="imageModeBtn" class="mode-btn outlined">🎨 Generate Images</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Loading/Welcome Screen -->
+      <div id="chatLoadingScreen" class="chat-loading-screen">
+        <div class="loading-content">
+          <div class="loading-animation">
+            <div class="spinner"></div>
+          </div>
+          <h2>Meet Saurabh's AI</h2>
+          <p class="about-ai">Waking up the server...</p>
+          <div class="about-content">
+            <div class="about-item">
+              <div class="item-emoji">🤖</div>
+              <div class="item-text">
+                <div class="item-title">AI Assistant</div>
+                <div class="item-desc">Ask me anything about Saurabh's projects, skills, and experience</div>
+              </div>
+            </div>
+            <div class="about-item">
+              <div class="item-emoji">👨‍💻</div>
+              <div class="item-text">
+                <div class="item-title">About Saurabh</div>
+                <div class="item-desc">AI Engineer at IIT Ropar specializing in LLMs, NLP, and scalable systems</div>
+              </div>
+            </div>
+          </div>
+          <p class="loading-tip">💡 Tip: You'll be able to chat once the server is ready</p>
+        </div>
+      </div>
+      
+      <!-- Meta AI Quick Action Section -->
+      <div id="metaAiSection" class="meta-ai-section">
+        <div class="meta-ai-icon">🤖</div>
+        <div class="meta-ai-text">
+          <div class="meta-ai-title">Ask Saurabh's AI</div>
+          <div class="meta-ai-desc">Ask anything about Saurabh</div>
+        </div>
+      </div>
+
+      <div id="chatMessages" class="chat-messages"></div>
+
+      <div class="chat-controls">
+        <textarea id="chatInput" placeholder="Type a message..." disabled></textarea>
+        <button id="chatSend" aria-label="Send message" disabled>➤</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // Ensure callback is available on window for Cloudflare Turnstile
+  async function onTurnstileSuccess(token){
+    const statusEl = document.getElementById('turnstile-status');
+    statusEl.textContent = 'Verifying...';
+    console.log('Turnstile token received:', token);
+    try{
+      // send both `token` and `response` to be compatible with various backends
+      const res = await fetch('https://saurabh-codes.onrender.com/api/verify-human', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token, response: token })
+      });
+      const data = await res.json();
+      console.log('Verification response:', data);
+      if(data && data.success){
+        statusEl.textContent = 'Verified ✓';
+      } else {
+        const details = data && (data['error-codes'] || data.error || JSON.stringify(data));
+        statusEl.textContent = 'Verification failed: ' + (details || 'unknown');
+      }
+    }catch(err){
+      statusEl.textContent = 'Verification error (see console)';
+      console.error('verify error', err);
+    }
+  }
+  // expose globally in case Turnstile reads the callback before this script runs
+  window.onTurnstileSuccess = onTurnstileSuccess;
+
+  // If the Turnstile API already loaded, re-render the widget to ensure it's attached
+  function ensureTurnstileRendered(){
+    try{
+      if(window.turnstile){
+        const el = document.querySelector('#turnstile-container .cf-turnstile');
+        if(el){
+          // If element already has a widget id, skip render
+          if(!el.getAttribute('data-widget-id')){
+            const wid = window.turnstile.render(el, { sitekey: el.getAttribute('data-sitekey'), callback: onTurnstileSuccess });
+            el.setAttribute('data-widget-id', wid);
+            console.log('Turnstile widget rendered (id=', wid, ')');
+          }
+        }
+      }
+    }catch(e){ console.warn('ensureTurnstileRendered error', e); }
+  }
+  // Try immediately and again after a short delay
+  ensureTurnstileRendered();
+  setTimeout(ensureTurnstileRendered, 1200);
+  </script>
+  <script src="./script.js"></script>
 </body>
 </html>

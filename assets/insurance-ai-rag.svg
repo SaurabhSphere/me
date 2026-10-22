@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ragGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" />
+      <stop offset="50%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#ragGrad)" />
+  <circle cx="300" cy="145" r="75" fill="#047857" opacity="0.25"/>
+  <!-- Shield & AI Node -->
+  <g transform="translate(265, 105)" stroke="url(#shieldGrad)" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M35 10 L60 22 C60 52 45 74 35 80 C25 74 10 52 10 22 Z" fill="#10b981" fill-opacity="0.2"/>
+    <circle cx="35" cy="45" r="8" fill="#34d399"/>
+    <path d="M25 45 L15 45 M45 45 L55 45 M35 35 L35 25 M35 55 L35 65" stroke="#a7f3d0" stroke-width="2"/>
+  </g>
+  <text x="300" y="245" text-anchor="middle" fill="#ffffff" font-family="'Poppins', sans-serif" font-size="26" font-weight="700">Insurance AI Assistant</text>
+  <text x="300" y="278" text-anchor="middle" fill="#a7f3d0" font-family="'Poppins', sans-serif" font-size="14" font-weight="500">RAG • LLMs • Claim Assistance • Denial Prediction</text>
+</svg>
